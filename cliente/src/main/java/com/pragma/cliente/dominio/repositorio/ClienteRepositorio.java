@@ -1,9 +1,9 @@
-package com.pragma.cliente.persistencia.repositorio;
+package com.pragma.cliente.dominio.repositorio;
 
+import com.pragma.cliente.persistencia.entidad.Cliente;
 import com.pragma.cliente.persistencia.mapeador.ClienteMapeador;
 import com.pragma.cliente.dominio.modelo.ClienteModelo;
 import com.pragma.cliente.persistencia.crud.ClienteCrud;
-import com.pragma.cliente.persistencia.entidad.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.pragma.cliente.persistencia.repositorio;
+package com.pragma.cliente.dominio.repositorio;
 
 import com.pragma.cliente.persistencia.mapeador.TipoDocumentoMapeador;
 import com.pragma.cliente.dominio.modelo.TipoDocumentoModelo;

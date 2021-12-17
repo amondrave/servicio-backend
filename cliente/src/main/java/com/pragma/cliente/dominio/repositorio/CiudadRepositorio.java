@@ -1,9 +1,9 @@
-package com.pragma.cliente.persistencia.repositorio;
+package com.pragma.cliente.dominio.repositorio;
 
+import com.pragma.cliente.persistencia.entidad.Ciudad;
 import com.pragma.cliente.persistencia.mapeador.CiudadMapeador;
 import com.pragma.cliente.dominio.modelo.CiudadModelo;
 import com.pragma.cliente.persistencia.crud.CiudadCrud;
-import com.pragma.cliente.persistencia.entidad.Ciudad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
