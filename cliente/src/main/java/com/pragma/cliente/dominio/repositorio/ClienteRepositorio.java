@@ -32,7 +32,18 @@ public class ClienteRepositorio {
 
     public Optional<ClienteModelo> obtenerClientePorId(Long id){
         Optional<Cliente> cliente = clienteCrud.findById(id);
-        return Optional.ofNullable(clienteMapeador.convertirClienteModelo(cliente.get()));
+        if(!cliente.isEmpty()){
+            return Optional.ofNullable(clienteMapeador.convertirClienteModelo(cliente.get()));
+        }
+        return null;
+    }
+
+    public Optional<ClienteModelo> obtenerClientePorNumeroDocumento(String numeroDocumento){
+        Optional<Cliente> cliente = clienteCrud.findByNumeroDocumento(numeroDocumento);
+        if(!cliente.isEmpty()){
+            return Optional.ofNullable(clienteMapeador.convertirClienteModelo(cliente.get()));
+        }
+        return null;
     }
 
     public Optional<ClienteModelo> guardar(ClienteModelo clienteModelo){

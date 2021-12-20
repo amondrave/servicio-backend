@@ -39,7 +39,7 @@ public class Cliente implements Serializable {
     @Positive(message = "La edad debe ser mayor a cero")
     private Integer edad;
 
-    @Column(name = "clie_numerodocumento")
+    @Column(name = "clie_numerodocumento", unique = true)
     @NotEmpty(message = "El numero de documento no puede ser vacio")
     private String numeroDocumento;
 

@@ -8,4 +8,6 @@ import java.util.Optional;
 
 public interface ClienteCrud extends JpaRepository<Cliente,Long> {
     Optional<List<Cliente>> findByEdadGreaterThanEqual(Integer age);
+
+    Optional<Cliente> findByNumeroDocumento(String numeroDocumento);
 }
