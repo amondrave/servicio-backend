@@ -20,7 +20,7 @@ public class CiudadRepositorio {
 
     public Optional<CiudadModelo> obtenerCiudadPorId(Long id){
         Optional<Ciudad> ciudad = ciudadCrud.findById(id);
-        return  Optional.of(ciudadMapeador.convertirCiudadModelo(ciudad.get()));
+        return  Optional.ofNullable(ciudadMapeador.convertirCiudadModelo(ciudad.get()));
     }
 
 }

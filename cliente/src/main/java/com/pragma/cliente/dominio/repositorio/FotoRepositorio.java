@@ -21,12 +21,12 @@ public class FotoRepositorio {
 
     public Optional<FotoModelo> obtenerFotoPorId(String id){
         Optional<Foto> foto = fotoCrud.findById(id);
-        return Optional.of(fotoMapeador.convertirFotoModelo(foto.get()));
+        return Optional.ofNullable(fotoMapeador.convertirFotoModelo(foto.get()));
     }
 
     public Optional<FotoModelo> guardar(FotoModelo fotoModelo){
         Foto foto = fotoMapeador.convertirFoto(fotoModelo);
-        return Optional.of(fotoMapeador.convertirFotoModelo(fotoCrud.save(foto)));
+        return Optional.ofNullable(fotoMapeador.convertirFotoModelo(fotoCrud.save(foto)));
     }
 
     public void eliminarPorId(String id){

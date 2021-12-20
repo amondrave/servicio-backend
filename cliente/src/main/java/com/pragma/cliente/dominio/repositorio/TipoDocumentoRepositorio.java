@@ -20,7 +20,7 @@ public class TipoDocumentoRepositorio {
 
     public Optional<TipoDocumentoModelo> obtenerTipoDocumentoPorId(Long id){
         Optional<TipoDocumento> tipoDocumento = tipoDocumentoCrud.findById(id);
-        return Optional.of(tipoDocumentoMapeador.convertirTipoDocumentoModelo(tipoDocumento.get()));
+        return Optional.ofNullable(tipoDocumentoMapeador.convertirTipoDocumentoModelo(tipoDocumento.get()));
     }
 
 

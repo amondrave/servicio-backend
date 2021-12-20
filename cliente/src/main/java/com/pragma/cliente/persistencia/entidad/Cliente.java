@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.io.Serializable;
 
@@ -34,9 +35,13 @@ public class Cliente implements Serializable {
     private String apellido;
 
     @Column(name = "clie_edad")
-    @NotEmpty(message = "La edad no puede estar vacia")
+    @NotNull(message = "La edad no puede se nula")
     @Positive(message = "La edad debe ser mayor a cero")
     private Integer edad;
+
+    @Column(name = "clie_numerodocumento")
+    @NotEmpty(message = "El numero de documento no puede ser vacio")
+    private String numeroDocumento;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tido_id", referencedColumnName = "tido_id", nullable = false)

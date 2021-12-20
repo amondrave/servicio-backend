@@ -18,6 +18,8 @@ public class ClienteModelo {
 
     private String apellido;
 
+    private String numeroDocumento;
+
     private Integer edad;
 
     private CiudadModelo ciudadModelo;

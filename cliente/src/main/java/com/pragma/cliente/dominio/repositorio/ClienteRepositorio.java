@@ -32,7 +32,7 @@ public class ClienteRepositorio {
 
     public Optional<ClienteModelo> obtenerClientePorId(Long id){
         Optional<Cliente> cliente = clienteCrud.findById(id);
-        return Optional.of(clienteMapeador.convertirClienteModelo(cliente.get()));
+        return Optional.ofNullable(clienteMapeador.convertirClienteModelo(cliente.get()));
     }
 
     public Optional<ClienteModelo> guardar(ClienteModelo clienteModelo){
