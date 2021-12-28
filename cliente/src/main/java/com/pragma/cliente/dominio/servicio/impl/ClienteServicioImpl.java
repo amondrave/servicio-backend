@@ -7,6 +7,8 @@ import com.pragma.cliente.dominio.servicio.interfaces.ClienteServicio;
 import com.pragma.cliente.dominio.servicio.interfaces.FotoServicio;
 import com.pragma.cliente.dominio.utilidades.error.ErrorMensaje;
 import javassist.NotFoundException;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +18,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
+@NoArgsConstructor
 public class ClienteServicioImpl implements ClienteServicio {
 
     @Autowired
